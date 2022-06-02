@@ -124,7 +124,7 @@ const NavBar = () => {
               </Button>
             ))}
           </Box>
-<CartWidget/>
+<CartWidget items={2}/>
           <Box sx={{ flexGrow: 0 }}>
       
           </Box>
