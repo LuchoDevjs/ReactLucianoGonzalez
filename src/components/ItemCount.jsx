@@ -2,7 +2,7 @@ import  React, { useState } from 'react';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 
- function ItemCount({inicial, max, onAdd}) {
+export default function ItemCount({inicial, max, onAdd}) {
      const [count, setCount] = useState(inicial);
 
      const sumar = () => {
@@ -32,4 +32,4 @@ import Button from '@mui/material/Button';
     </>
   );
 }
-export default ItemCount;
+ 
