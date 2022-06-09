@@ -20,13 +20,13 @@ export default function ItemCount({inicial, max, onAdd}) {
     <h2 className='h1Saludo'>{count}</h2>
       <div className='contador'>
     <Stack direction="row" spacing={2}> 
-      <Button onClick={sumar} variant="contained" style={{background:'black', color:'white'}}>
+      <Button onClick={sumar} variant="contained" style={{background:'#00092C', color:'white'}}>
         +
       </Button>
-      <Button onClick={restar} variant="outlined" style={{background:'black', color:'white'}}>
+      <Button onClick={restar} variant="outlined" style={{background:'#00092C', color:'white'}}>
        -
       </Button>
-      <Button onClick={() => { onAdd(count); reset()}} style={{background:'black', color:'white'}}>Agregar al carrito</Button>
+      <Button onClick={() => { onAdd(count); reset()}} style={{background:'#00092C', color:'white'}}>Agregar al carrito</Button>
     </Stack>
     </div>
     </>

@@ -5,27 +5,29 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 
-function Item(personaje) {
-    const [name ,image, species, status] = personaje
+function Item({personaje}) {
+    const {name ,image, species} = personaje
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 340 }} style={{margin: '13px', width: '15%'}}>
       <CardActionArea>
         <CardMedia
-          src={image}
+          component="img"
+          height="140"
+          src= {image}
+          alt="img"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {name}
+           {name}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-           Especies: {species}
-           Estado:{status}
+          Especies: {species}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          Ver mas detalles
+        <Button size="small" style={{color:'rgb(31 60 174)'}}>
+         Ver mas detalles
         </Button>
       </CardActions>
     </Card>

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import ItemList from './ItemList';
+import ItemListt from './ItemListt';
+
 
 function ItemListContainer({saludo}) {
-  const [personajes,setPersonajes] = useState([])
+  const [personajes, setPersonajes] = useState([])
 
   useEffect(() => {
     fetch("https://rickandmortyapi.com/api/character")
@@ -10,13 +11,13 @@ function ItemListContainer({saludo}) {
     .catch(error => console.error('Error:',error))
     .then(res => setPersonajes(res.results) )
 
-  },[])
+  }, [])
 
   return (
     <div>
-      <ItemList personajes={personajes}/>
+      <h1 className='h1Saludo'>{saludo}</h1>
+    <ItemListt personajes={personajes}/> 
     </div>
-  //  <h1 className='h1Saludo'>{saludo}</h1>
  
   )
 }
