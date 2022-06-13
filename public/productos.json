@@ -1,0 +1,51 @@
+
+{
+    "productos":[
+        {
+            "id":"1",
+            "model":"Audi Q3",
+            "year":"2018",
+            "color":"black",
+            "price":"$58,800",
+            "category":"Audi",
+            "cantidad":"10",
+            "image":"./assets/img/audiq3.jpeg" 
+        },
+        {
+            "id":"2",
+            "model":"Audi TT",
+            "year":"2018",
+            "color":"white",
+            "price":"$49,300",
+            "category":"Audi",
+            "cantidad":"5",
+            "image":"./assets/img/auditt.jpeg"
+        },
+        {
+            "id":"3",
+            "model":"Mercedes-Benz A45",
+            "year":"2013",
+            "color":"red",
+            "price":"$74.000",
+            "category":"Mercedes Benz",
+            "cantidad":"12",
+            "image":"./assets/img/mercedesBenzA45"
+        },
+        {
+            "id":"4",
+            "model":"",
+            "year":"",
+            "color":"",
+            "price":"",
+            "image":""
+        },
+        {
+            "id":"5",
+            "model":"",
+            "year":"",
+            "color":"",
+            "price":"",
+            "image":""
+        }
+    ]
+}
