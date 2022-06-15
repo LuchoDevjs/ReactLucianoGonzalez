@@ -14,8 +14,6 @@ useEffect(() => {
     }, 2000)
 }, [])
 
-console.log(item)
-
   return (
   <>
  <ItemDetail item={item}/>

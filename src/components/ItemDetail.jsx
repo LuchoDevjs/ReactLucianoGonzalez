@@ -8,7 +8,7 @@ function ItemDetail({item}) {
  <>
  <h2 style={{textAlign:'center'}}>Detalle del Producto</h2>
  <div className='itemDetail'>
-    <img src="assets/img/audiq3.jpeg" className='itemDetail__img' alt="" />
+    <img src="assets/img/gorraNYblack.jpg" className='itemDetail__img' alt="" />
      <div className='itemDetail__p'>
      <p>{model}</p>
      <p>Year: {year}</p>
