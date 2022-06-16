@@ -1,25 +1,28 @@
-import React from 'react'
+import React from "react";
+import { Button } from "@mui/material";
 
-
-function ItemDetail({item}) {
-   const {model, year, color, category, price} = item;
+function ItemDetail({ item }) {
+  const { model, image, price, description } = item;
 
   return (
- <>
- <h2 style={{textAlign:'center'}}>Detalle del Producto</h2>
- <div className='itemDetail'>
-    <img src="assets/img/gorraNYblack.jpg" className='itemDetail__img' alt="" />
-     <div className='itemDetail__p'>
-     <p>{model}</p>
-     <p>Year: {year}</p>
-     <p>Color:{color}</p>
-     <p>Categoria: {category}</p>
-     <p>{price}</p>
-     <button>Comprar</button>
-     </div>
- </div>
- </>
-  )
+    <>
+      <h2 style={{ textAlign: "center" }}>Detalle del Producto</h2>
+      <div className="itemDetail">
+        <img src={image} className="itemDetail__img" alt="" />
+        <div className="itemDetail__p">
+          <h1>{model}</h1>
+          <h3>{description}</h3>
+          <h2>{price}</h2>
+          <Button
+            disableElevation
+            style={{ backgroundColor: "white", color: "rgb(0 37 177)" }}
+          >
+            Comprar
+          </Button>
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default ItemDetail;

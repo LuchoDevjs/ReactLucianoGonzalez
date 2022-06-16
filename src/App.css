@@ -18,9 +18,30 @@
   justify-content: center;
   background-color: rgb(0, 9, 44);
   color: #fff;
+  padding: 50px;
 }
 .itemDetail__img{
   width: 40%;
   border-radius: 15px;
   padding: 10px;
+}
+.error404{
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  margin-top: 10rem;
+}
+.error404 h1{
+  font-size: 70px;
+}
+.error404 p {
+  font-size: 40px;
+}
+.buttonItem{
+  text-decoration: none;
+  color: rgb(31 60 174);
+}
+.buttonCategoriasItem{
+  color: black;
+  text-decoration: none;
 }
