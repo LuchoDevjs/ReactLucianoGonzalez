@@ -36,7 +36,8 @@ const NavBar = () => {
     setAnchorEl(null);
   };
   return (
-    <AppBar position="static" style={{ background: "#00092C", padding: "7px" }}>
+    <>
+    <AppBar position="static" style={{ background: "white", padding: "1px",color:'#787A91' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
@@ -118,14 +119,14 @@ const NavBar = () => {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{ my: 2, color: "#787A91", display: "block" }}
               >
                 {page}
               </Button>
             ))}
           </Box>
           <Button
-            style={{ color: "white", marginRight: "2rem" }}
+            style={{ color:'#787A91', marginRight: "2rem" }}
             id="basic-button"
             aria-controls={open ? "basic-menu" : undefined}
             aria-haspopup="true"
@@ -164,6 +165,7 @@ const NavBar = () => {
         </Toolbar>
       </Container>
     </AppBar>
+    </>
   );
 };
 export default NavBar;

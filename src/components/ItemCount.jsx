@@ -2,46 +2,45 @@ import React, { useState } from "react";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 
-export default function ItemCount({ inicial, max, onAdd }) {
+export default function ItemCount({ inicial, onAdd, cantidad }) {
   const [count, setCount] = useState(inicial);
 
-  const sumar = () => {
-    count < max ? setCount(count + 1) : alert("No podes agregar mas productos");
+  const sumarStock = () => {
+    if (count < cantidad) {
+      setCount(count + 1);
+    }
   };
-  const restar = () => {
-    count > inicial
-      ? setCount(count - 1)
-      : alert("No puedes quitar mas productos");
-  };
-  const reset = () => {
-    setCount(inicial);
+
+  const restarStock = () => {
+    if (count > 1) {
+      setCount(count - 1);
+    }
   };
 
   return (
     <>
-      <h2 className="h1Saludo">{count}</h2>
       <div className="contador">
         <Stack direction="row" spacing={2}>
           <Button
-            onClick={sumar}
+            onClick={sumarStock}
             variant="contained"
-            style={{ background: "#00092C", color: "white" }}
+            style={{ background: "#000000ba", color: "white" }}
           >
             +
           </Button>
+          <h2 style={{ display: "flex", justifyContent: "center" }}>{count}</h2>
           <Button
-            onClick={restar}
+            onClick={restarStock}
             variant="outlined"
-            style={{ background: "#00092C", color: "white" }}
+            style={{ background: "#000000ba", color: "white" }}
           >
             -
           </Button>
           <Button
             onClick={() => {
               onAdd(count);
-              reset();
             }}
-            style={{ background: "#00092C", color: "white" }}
+            style={{ background: "#000000ba", color: "white" }}
           >
             Agregar al carrito
           </Button>

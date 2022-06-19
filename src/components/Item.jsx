@@ -14,7 +14,12 @@ function Item({ personaje }) {
         <CardActionArea>
           <CardMedia component="img" height="150" src={image} alt="img" />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="div"
+              style={{ color: "#000000ba" }}
+            >
               {model}
             </Typography>
             <Typography variant="body2" color="text.secondary">
@@ -27,7 +32,7 @@ function Item({ personaje }) {
         </CardActionArea>
         <CardActions>
           <Link to={`/item/${id}`} className="buttonItem">
-            <Button>Ver mas detalles</Button>
+            <Button style={{ color: "#787A91" }}>Ver mas detalles</Button>
           </Link>
         </CardActions>
       </Card>

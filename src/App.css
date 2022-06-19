@@ -1,11 +1,12 @@
 .h1Saludo{
   font-size: 1.5rem;
   text-align: center;
+  color: #000000ba;
 }
 .contador{
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 10px;
 }
 .ListaPersonajes{
   display: flex;
@@ -16,14 +17,16 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: rgb(0, 9, 44);
-  color: #fff;
-  padding: 50px;
+  align-items: center;
+  background-color: rgba(128, 128, 128, 0.15);
+  color: #000000ba;
+  padding: 10px; 
 }
 .itemDetail__img{
   width: 40%;
   border-radius: 15px;
   padding: 10px;
+  margin-left: 100px;
 }
 .error404{
   display: flex;
@@ -39,9 +42,29 @@
 }
 .buttonItem{
   text-decoration: none;
-  color: rgb(31 60 174);
+  color: #787A91;
+  border-radius: 15px;
+  transition: 0.7s;
+}
+.buttonItem:hover{
+  color: white;
+  background-color:rgba(0, 0, 0, 0.126);
 }
 .buttonCategoriasItem{
-  color: black;
+  color: #787A91;
   text-decoration: none;
+}
+.pagination{
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  color: rgb(0, 9, 44);
+}
+.flexPriceButton{
+  display: flex;
+  justify-content: center;
+}
+.itemDetail__p{
+   padding: 50px;
+   margin-right: 100px;
 }
