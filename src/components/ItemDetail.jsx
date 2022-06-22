@@ -1,22 +1,24 @@
-import React from "react";
+import { useState, useContext } from "react";
 import ItemCount from "./ItemCount";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
+import { CartContext } from "./context/CartContext";
 
 function ItemDetail({ item }) {
   const { model, image, price, description, cantidad } = item;
-  const [units, setUnit] = useState(0);
+  const [units, setUnits] = useState(0);
+  const { addItem} = useContext( CartContext )
 
   const onAdd = (quantityToAdd) => {
-    setUnit(quantityToAdd);
     alert(`Se han agregado ${quantityToAdd} productos`);
+    //isInCart( item.id )
+    setUnits(quantityToAdd);
+    addItem( item, quantityToAdd )
   };
+
   return (
     <>
-      <h2 style={{ textAlign: "center", color: "#000000ba" }}>
-        Detalle del Producto
-      </h2>
+      <h2 className="h2itemDetail">Detalle del Producto</h2>
       <div className="itemDetail">
         <img src={image} className="itemDetail__img" alt="" />
         <div className="itemDetail__p">
@@ -27,15 +29,8 @@ function ItemDetail({ item }) {
           </div>
           <div>
             {units > 0 ? (
-              <Link
-                to={"/cart"}
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  textDecoration: "none",
-                }}
-              >
-                <Button style={{ background: "#000000ba", color: "white" }}>
+              <Link to={"/cart"} className="buttonTerminarCompra">
+                <Button>
                   {" "}
                   Terminar mi compra{" "}
                 </Button>

@@ -6,11 +6,15 @@ import NavBar from "./components/NavBar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Error404 from "./components/Error404";
 import Cart from "./components/Cart";
+import CartContext from "./components/context/CartContext";
+import MyProvider from "./components/context/CartContext";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <MyProvider>
+      <CartContext>
         <NavBar />
         <div className="contenido">
           <Routes>
@@ -22,6 +26,8 @@ function App() {
             <Route path="*" element={<Error404 />} />
           </Routes>
         </div>
+        </CartContext>
+        </MyProvider>
       </BrowserRouter>
     </div>
   );

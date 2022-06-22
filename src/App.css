@@ -1,70 +1,151 @@
-.h1Saludo{
+.h1Saludo {
   font-size: 1.5rem;
   text-align: center;
   color: #000000ba;
 }
-.contador{
+
+.contador {
   display: flex;
   justify-content: center;
   padding: 10px;
 }
-.ListaPersonajes{
+.contador button{
+  background: #000000ba;
+  color: white;
+}
+.contador button:hover{
+ background-color: #323030ba;
+}
+.ListaPersonajes {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.itemDetail{
+
+.itemDetail {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: rgba(128, 128, 128, 0.15);
   color: #000000ba;
-  padding: 10px; 
+  padding: 10px;
 }
-.itemDetail__img{
+
+.itemDetail__img {
   width: 40%;
   border-radius: 15px;
   padding: 10px;
   margin-left: 100px;
 }
-.error404{
+
+.error404 {
   display: flex;
   align-items: center;
-  flex-direction: column; 
+  flex-direction: column;
   margin-top: 10rem;
 }
-.error404 h1{
+
+.error404 h1 {
   font-size: 70px;
 }
+
 .error404 p {
   font-size: 40px;
 }
-.buttonItem{
+
+.buttonItem {
   text-decoration: none;
   color: #787A91;
   border-radius: 15px;
   transition: 0.7s;
 }
-.buttonItem:hover{
+
+.buttonItem:hover {
   color: white;
-  background-color:rgba(0, 0, 0, 0.126);
+  background-color: rgba(0, 0, 0, 0.126);
 }
-.buttonCategoriasItem{
+
+.buttonCategoriasItem {
   color: #787A91;
   text-decoration: none;
 }
-.pagination{
+
+.pagination {
   display: flex;
   justify-content: center;
   padding: 30px;
   color: rgb(0, 9, 44);
 }
-.flexPriceButton{
+
+.flexPriceButton {
   display: flex;
   justify-content: center;
 }
-.itemDetail__p{
-   padding: 50px;
-   margin-right: 100px;
+
+.itemDetail__p {
+  padding: 50px;
+  margin-right: 100px;
+}
+
+.cartVacio {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  font-size: 20px;
+  color: rgb(75 76 95);
+}
+
+.cartVacio h1 {
+  margin: 8px;
+}
+
+.cartVacio div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cartVacio p {
+  align-items: center;
+  color: #787A91;
+  margin: 3px;
+}
+
+.error404 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 50vh;
+}
+
+.error404 h1 {
+  color: rgb(75 76 95);
+  font-size: 3rem;
+  margin: 0;
+}
+
+.error404 p {
+  color: #787A91;
+  font-size: 2rem;
+}
+.h2itemDetail{
+  text-align: center;
+  color: #000000ba;
+}
+.buttonTerminarCompra{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+.buttonTerminarCompra button{
+  background: #000000ba;
+  color: white;
+}
+.buttonTerminarCompra button:hover{
+  background-color: #323030ba;
 }
