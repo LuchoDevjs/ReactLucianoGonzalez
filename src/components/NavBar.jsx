@@ -44,11 +44,12 @@ const NavBar = () => {
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
+            <Link to="/" style={{textDecoration:"none", color:"#787A91"}}>
             <Typography
               variant="h6"
               noWrap
               component="a"
-              href="/"
+             
               sx={{
                 mr: 2,
                 display: { xs: "none", md: "flex" },
@@ -61,6 +62,7 @@ const NavBar = () => {
             >
               Ⱡυ𝐜𝒽σ
             </Typography>
+            </Link>
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton

@@ -25,7 +25,7 @@ function ItemDetail({ item }) {
           <h1>{model}</h1>
           <h3>{description}</h3>
           <div className="flexPriceButton">
-            <h2>{price}</h2>
+            <h2>${price}</h2>
           </div>
           <div>
             {units > 0 ? (

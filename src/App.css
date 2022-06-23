@@ -149,3 +149,31 @@
 .buttonTerminarCompra button:hover{
   background-color: #323030ba;
 }
+.mostrarCart{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 50px;
+  font-size: 1.3rem;
+  color: rgb(75 76 95);
+}
+.mostrarProducto{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.btnDelete{
+  height: 100px;
+  width: 40px;
+  margin-left: 30px;
+}
+.total{
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+  font-size: 1.3rem;
+  color: rgb(75 76 95);
+}
+.total p,button{
+  margin-left: 50px;
+}

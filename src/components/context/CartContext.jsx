@@ -6,7 +6,6 @@ const { Provider } = CartContext;
 
 const MyProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  console.log(cart)
 
   // metodo some - itemdetail - se encarga de detectar si el producto a agregar ya esta en el carrito o no. retorna booleano
   const isInCart = (id) => {
@@ -25,7 +24,7 @@ const MyProvider = ({ children }) => {
       auxArray[productIndex].quantity += quantity;
       setCart(auxArray)
     } else {
-      setCart([...cart], newItem);
+      setCart([...cart, newItem]);
     }
   };
   // vaciar el carrito - cart - boton
@@ -38,11 +37,11 @@ const MyProvider = ({ children }) => {
   };
   // metodo reduce - cartwidget retorna la cantidad total de unidades que tiene nuestro state cart
   const getItemQty = () => {
-    return cart.reduce(( acc, x ) => acc += x.cantidad, 0)
+    return cart.reduce(( acc, x ) => acc += x.quantity, 0)
   };
   // metodo reduce - cart - retorna el precio total del carrito
   const getItemPrice = () => {
-    return cart.reduce(( acc, x ) => acc += x.cantidad * x.price, 0)
+    return cart.reduce(( acc, x ) => acc += x.quantity * x.price, 0)
   };
 
   return <Provider value={{ cart, addItem , emptyCart, deleteItem, getItemQty, getItemPrice }}>{children} </Provider>;
