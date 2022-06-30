@@ -23,7 +23,7 @@ function Item({ personaje }) {
               {model}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Precio: {price}
+              Precio: ${price}
             </Typography>
             <Typography variant="body2" color="text.secondary">
               Color: {color}

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { CartContext } from "./context/CartContext";
-import { TiDeleteOutline } from "react-icons/ti";
+import { TiDelete } from "react-icons/ti";
 import { Button} from "@mui/material";
 import DeleteIcon from '@mui/icons-material/Delete';
 
@@ -23,7 +23,7 @@ function Cart() {
                     <p style={{padding:"25px"}}> {item.model}</p>
                     <p style={{padding:"25px"}}>${item.price}</p>
                     <p style={{padding:"25px"}}>Cantidad: {item.quantity}</p>
-                    <TiDeleteOutline
+                    <TiDelete
                       className="btnDelete"
                       onClick={() => deleteItem(item.id)}
                     />

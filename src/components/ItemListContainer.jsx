@@ -1,32 +1,41 @@
 import React, { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
+import {
+  collection,
+  getDocs,
+  getFirestore,
+  query,
+  where,
+} from "firebase/firestore";
 
 function ItemListContainer({ saludo }) {
   const { id } = useParams();
-  const [products, setProducts] = useState([]);
-  const [resultado, setResultado] = useState();
+  const [result, setResult] = useState();
+  const [products] = useState([]);
 
   useEffect(() => {
-    fetch("../../productos.json")
-      .then((res) => res.json())
-      .then((res) => setProducts(res.productos))
-      .catch((error) => console.error("Error:", error));
-  }, []);
 
-  useEffect(() => {
-    if (id) {
-      let filtrados = products.filter((product) => product.category === id);
-      setResultado(filtrados);
+    const db = getFirestore();
+    const productsCollection = collection( db, 'products' );
+    if ( id ) {
+      const q = query( productsCollection, where('category', '==', id))
+      getDocs( q ).then((snapshot) => {
+        setResult( snapshot.docs.map(( doc ) => ({ ...doc.data(), id: doc.id })))
+    })}else{
+
+      getDocs( productsCollection ).then((snapshot) => {
+        setResult( snapshot.docs.map(( doc ) => ({ ...doc.data(), id: doc.id })) )
+      })
     }
-  }, [id, products]);
+  }, [ id ]);
 
   return (
     <>
       <div>
         <h1 className="h1Saludo">{saludo}</h1>
-        {resultado !== undefined ? (
-          <ItemList personajes={resultado} />
+        {result !== undefined ? (
+          <ItemList personajes={result} />
         ) : (
           <ItemList personajes={products} />
         )}

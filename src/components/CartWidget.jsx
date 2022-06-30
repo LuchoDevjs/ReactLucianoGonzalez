@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { MdAddShoppingCart } from "react-icons/md";
 import { CartContext } from "./context/CartContext";
 
 function CartWidget() {
@@ -7,8 +7,8 @@ function CartWidget() {
 
   return (
     <>
-      <ShoppingCartIcon />
-      <span>{getItemQty() > 0 && getItemQty()}</span>
+      <MdAddShoppingCart style={{fontSize:"1.4rem"}}/>
+      <span style={{textAlign:"center",marginBottom:"50px"}}>{getItemQty() > 0 && getItemQty()}</span>
     </>
   );
 }

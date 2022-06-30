@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
+import { doc, getDoc, getFirestore } from 'firebase/firestore'
 
 function ItemDetailContainer() {
   const { id } = useParams();
   const [item, setItem] = useState([]);
 
   useEffect(() => {
-    fetch("../../productos.json")
-      .then((res) => res.json())
-      .then((data) =>
-        setItem(data.productos.find((producto) => producto.id === id))
-      )
-      .catch((error) => console.error("Error", error));
+    const db = getFirestore();
+    const productRef = doc( db, 'products', id );
+    getDoc( productRef ).then(( snapshot ) => {
+      setItem({ ...snapshot.data(), id: snapshot.id });
+    })
   }, [id]);
   return item && <ItemDetail item={item} />;
 }

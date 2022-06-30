@@ -1,8 +1,7 @@
 import React from "react";
 import Item from "./Item";
-import Pagination from "@mui/material/Pagination";
 
-function ItemListt({ personajes }) {
+function ItemList({ personajes }) {
   return (
     <>
       <div className="ListaPersonajes">
@@ -10,9 +9,8 @@ function ItemListt({ personajes }) {
           <Item key={personajes.id} personaje={personajes} />
         ))}
       </div>
-      <Pagination count={5} className="pagination" />
     </>
   );
 }
 
-export default ItemListt;
+export default ItemList;

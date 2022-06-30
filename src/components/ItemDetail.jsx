@@ -7,7 +7,7 @@ import { CartContext } from "./context/CartContext";
 function ItemDetail({ item }) {
   const { model, image, price, description, cantidad } = item;
   const [units, setUnits] = useState(0);
-  const { addItem} = useContext( CartContext )
+  const { addItem } = useContext( CartContext )
 
   const onAdd = (quantityToAdd) => {
     alert(`Se han agregado ${quantityToAdd} productos`);

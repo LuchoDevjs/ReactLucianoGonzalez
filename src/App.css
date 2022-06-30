@@ -156,6 +156,7 @@
   margin: 50px;
   font-size: 1.3rem;
   color: rgb(75 76 95);
+  
 }
 .mostrarProducto{
   display: flex;
@@ -169,8 +170,7 @@
 }
 .total{
   display: flex;
-  justify-content: center;
-  margin: 30px;
+  justify-content: space-evenly;
   font-size: 1.3rem;
   color: rgb(75 76 95);
 }

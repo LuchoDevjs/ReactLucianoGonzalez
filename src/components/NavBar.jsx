@@ -12,6 +12,7 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
+import { Categories } from "./Categories";
 
 const pages = ["Productos", "Precios"];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -43,8 +44,7 @@ const NavBar = () => {
       >
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
-            <Link to="/" style={{textDecoration:"none", color:"#787A91"}}>
+            <Link to={"/"} style={{textDecoration:"none", color:"#787A91"}}>
             <Typography
               variant="h6"
               noWrap
@@ -149,30 +149,7 @@ const NavBar = () => {
                 "aria-labelledby": "basic-button",
               }}
             >
-              <Link
-                to={"/category/gorranegra"}
-                className="buttonCategoriasItem"
-              >
-                <MenuItem onClick={handleClose}>Gorras Negras</MenuItem>
-              </Link>
-              <Link
-                to={"/category/gorrasrojas"}
-                className="buttonCategoriasItem"
-              >
-                <MenuItem onClick={handleClose}>Gorras Rojas</MenuItem>
-              </Link>
-              <Link
-                to={"/category/gorrasazul"}
-                className="buttonCategoriasItem"
-              >
-                <MenuItem onClick={handleClose}>Gorras Azules</MenuItem>
-              </Link>
-              <Link
-                to={"/category/gorrasverdes"}
-                className="buttonCategoriasItem"
-              >
-                <MenuItem onClick={handleClose}>Gorras Verdes</MenuItem>
-              </Link>
+             <Categories/>
             </Menu>
             <Link
               to={"/cart"}

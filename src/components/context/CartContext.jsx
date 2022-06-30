@@ -37,14 +37,15 @@ const MyProvider = ({ children }) => {
   };
   // metodo reduce - cartwidget retorna la cantidad total de unidades que tiene nuestro state cart
   const getItemQty = () => {
-    return cart.reduce(( acc, x ) => acc += x.quantity, 0)
+    return cart.length;
+    // cart.reduce(( acc, x ) => acc += x.quantity, 0)
   };
   // metodo reduce - cart - retorna el precio total del carrito
   const getItemPrice = () => {
     return cart.reduce(( acc, x ) => acc += x.quantity * x.price, 0)
   };
 
-  return <Provider value={{ cart, addItem , emptyCart, deleteItem, getItemQty, getItemPrice }}>{children} </Provider>;
+  return <Provider value={{ cart, addItem , emptyCart, deleteItem, getItemQty, getItemPrice }}>{ children} </Provider>;
 };
 
 export default MyProvider;
