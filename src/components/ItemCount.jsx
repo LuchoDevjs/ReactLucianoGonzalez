@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
+import {getDocs, query, where, collection, getFirestore} from 'firebase/firestore';
 
-export default function ItemCount({ inicial, onAdd, cantidad }) {
+export default function ItemCount({ inicial, onAdd, stock}) {
   const [count, setCount] = useState(inicial);
 
   const sumarStock = () => {
-    if (count < cantidad) {
+    if (count < stock) {
       setCount(count + 1);
     }
   };

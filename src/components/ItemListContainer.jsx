@@ -12,7 +12,7 @@ import {
 function ItemListContainer({ saludo }) {
   const { id } = useParams();
   const [result, setResult] = useState();
-  const [products] = useState([]);
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
 

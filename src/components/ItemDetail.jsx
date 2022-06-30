@@ -5,13 +5,12 @@ import { Button } from "@mui/material";
 import { CartContext } from "./context/CartContext";
 
 function ItemDetail({ item }) {
-  const { model, image, price, description, cantidad } = item;
+  const { model, image, price, description, stock } = item;
   const [units, setUnits] = useState(0);
   const { addItem } = useContext( CartContext )
 
   const onAdd = (quantityToAdd) => {
     alert(`Se han agregado ${quantityToAdd} productos`);
-    //isInCart( item.id )
     setUnits(quantityToAdd);
     addItem( item, quantityToAdd )
   };
@@ -36,7 +35,7 @@ function ItemDetail({ item }) {
                 </Button>
               </Link>
             ) : (
-              <ItemCount cantidad={cantidad} inicial={1} onAdd={onAdd} />
+              <ItemCount inicial={1} onAdd={onAdd} stock={stock} />
             )}
           </div>
         </div>
